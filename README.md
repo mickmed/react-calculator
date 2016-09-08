@@ -17,7 +17,7 @@ Fork and clone the homework repo like always. Run ```npm install``` from the com
       <span>+</span>
       <input type="text" />
       <span>=</span>
-      <h3>// Addition results go here! //</h3>
+      <h3>Addition results go here!</h3>
     </div>
   </div>
   
