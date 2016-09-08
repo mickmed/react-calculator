@@ -13,11 +13,11 @@ Fork and clone the homework repo like always. Run ```npm install``` from the com
         <h1>Add with React!</h1>
 
         <div className="add">
-          <input type="text" ref="val1" onKeyUp={this.add.bind(this)} />
+          <input type="text" />
           <span>+</span>
-          <input type="text" ref="val2" onKeyUp={this.add.bind(this)} />
+          <input type="text" />
           <span>=</span>
-          <h3>{this.state.sum}</h3>
+          <h3>// Addition results go here! //</h3>
         </div>
       </div>
   
