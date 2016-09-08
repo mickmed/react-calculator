@@ -3,7 +3,7 @@
 Tonight you will be building a calculator with React. At first your calculator will just add 2 numbers together when they are typed in. For the bonus, we might get more creative.
 
 ### Set Up
-Fork and clone the homework repo like always. Run npm install from the command line to install all dependencies. You will need to run npm start got to localhost:3000.
+Fork and clone the homework repo like always. Run ```npm install``` from the command line to install all dependencies. You will need to run ```npm start``` and go to ```http://localhost:3000```.
 
 ### Steps
 
