@@ -10,16 +10,16 @@ Fork and clone the homework repo like always. Run ```npm install``` from the com
 1. Start by creating a single component file in src/components and name it Calculator.js. Create your Calculator class and in your render function add the following:
   ```js
   <div className="container">
-        <h1>Add with React!</h1>
+    <h1>Add with React!</h1>
 
-        <div className="add">
-          <input type="text" />
-          <span>+</span>
-          <input type="text" />
-          <span>=</span>
-          <h3>// Addition results go here! //</h3>
-        </div>
-      </div>
+    <div className="add">
+      <input type="text" />
+      <span>+</span>
+      <input type="text" />
+      <span>=</span>
+      <h3>// Addition results go here! //</h3>
+    </div>
+  </div>
   
   ```
 
