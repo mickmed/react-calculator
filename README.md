@@ -7,7 +7,7 @@ Fork and clone the homework repo like always. Run ```npm install``` from the com
 
 ### Steps
 
-1. Start by creating a single component file in src/components and name it Calculator. Create your Calculator class and in your render function add the following:
+1. Start by creating a single component file in src/components and name it Calculator.js. Create your Calculator class and in your render function add the following:
   ```js
   <div className="container">
         <h1>Add with React!</h1>
