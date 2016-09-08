@@ -3,19 +3,24 @@
 Tonight you will be building a calculator with React. At first your calculator will just add 2 numbers together when they are typed in. For the bonus, we might get more creative.
 
 ### Set Up
-You have been provided with a static html page `calc.html` that already includes babel and react. You simply need to add your react code inside the script tags in the file and open in the browser.
+Fork and clone the homework repo like always. Run npm install from the command line to install all dependencies. You will need to run npm start got to localhost:3000.
 
 ### Steps
 
-1. Start by creating your a single component and mounting it with some sample text in it. Maybe you'll call it Calculator:
+1. Start by creating a single component file in src/components and name it Calculator. Create your Calculator class and in your render function add the following:
   ```js
-  class Calculator extends React.Component {
-    render() {
-      return (<div>Hello World!</div>);
-    }
-  };
+  <div className="container">
+        <h1>Add with React!</h1>
+
+        <div className="add">
+          <input type="text" ref="val1" onKeyUp={this.add.bind(this)} />
+          <span>+</span>
+          <input type="text" ref="val2" onKeyUp={this.add.bind(this)} />
+          <span>=</span>
+          <h3>{this.state.sum}</h3>
+        </div>
+      </div>
   
-  ReactDOM.render(<Calculator />, document.getElementById('container'));
   ```
 
 2. Port the relevant HTML code that already exists into JSX in your `render` method. At this point the page should look identical to how it started, except now we're rendering it with React.
