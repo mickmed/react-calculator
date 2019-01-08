@@ -28,10 +28,7 @@ Fork and clone the homework repo like always. Run ```npm install``` from the com
 4. Once you know what event to listen for, you'll need to create a method that accepts the triggered event, gets the input values from your form, adds them together, and sets the state of the new `sum`.
     - **thought**: how will you handle inputs that aren't numbers?
 5. Once the state of the `sum` has been set, React will re-render the whole component. Make sure you have a place in your JSX that displays the result!
-
-### Bonus
-
-- Make the calculator work with any of the 4 basic arithmetic operations (+, -, *, /). How will this change your state, and your JSX?
+6. Make the calculator work with any of the 4 basic arithmetic operations (+, -, *, /). How will this change your state, and your JSX?
 
 ## Licensing
 All content is licensed under a CC­BY­NC­SA 4.0 license.
