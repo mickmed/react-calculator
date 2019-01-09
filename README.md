@@ -2,12 +2,9 @@
 
 Tonight you will be building a calculator with React. At first your calculator will just add 2 numbers together when they are typed in. For the bonus, we might get more creative.
 
-### Set Up
-Fork and clone the homework repo like always. Run ```npm install``` from the command line to install all dependencies. You will need to run ```npm start``` and go to ```http://localhost:3000```.
-
 ### Steps
-
-1. Start by creating a single component file in src/components and name it Calculator.js. Create your Calculator class and in your render function add the following:
+1. Fork and clone the homework repo like always. Run ```npm install``` from the command line to install all dependencies. You will need to run ```npm start``` and go to ```http://localhost:3000```. You will get an error! That's fine - this is because there is no Calculator component. We'll fix that in the next step.
+2. Now create a single component file in src/components and name it Calculator.js. Create your Calculator class and in your render function add the following:
   ```js
   <div className="container">
     <h1>Add with React!</h1>
