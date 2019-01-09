@@ -4,12 +4,30 @@ class Calculator extends Component {
   constructor(props) {
     super(props);
     this.state = { 
-        value: "",
+        value: '',
         sum: '',
         ans: 0
     };
   }
 
+  handleChange = (event) => {
+    let sh = event.target.value
+    console.log(event.target.value)
+    // this.setState(prevState => {
+    //     return{
+    //         sum: prevState.sum + sh
+    //     }
+    // })
+    this.setState({sum: event.target.value})
+    
+    // console.log(this.state.sum)
+    event.preventDefault();
+  }
+
+  handleSubmit = (event) => {
+   
+    event.preventDefault();
+  }
 
 
   clkMathEq = event => {
@@ -19,12 +37,11 @@ class Calculator extends Component {
             sum: prevState.sum + sh
         }
     })
-    
-    console.log(eval(1+3))
+  
     event.preventDefault();
   }
 
-  handleEquals = event => {
+  clkEquals = event => {
       let a = eval(this.state.sum)
       console.log(a)
 
