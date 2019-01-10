@@ -1,6 +1,8 @@
 .container {
   text-align: center;
   background-color:lightyellow;
+  height:100vw;
+  padding-top:30px;
 }
 .inner-cont{
   margin:0 auto;
@@ -8,9 +10,12 @@
   background-image: linear-gradient(rgb(157, 210, 226),rgb(163, 173, 228));
   padding:20px;
   border-radius:20px;
+  
 }
 h1{
   letter-spacing:2px;
+  color:rgb(226, 43, 73);
+  text-shadow: .5px .5px white;
 }
 .form {
   display: flex;
@@ -22,7 +27,7 @@ h1{
 }
 
 input {
-  width: 300px;
+  width: 250px;
   height: 50px;
   text-align: right;
   font-size: 50px;
@@ -34,7 +39,7 @@ input {
   margin: 0px 20px;
 }
 
-button {
+button, .mod {
   width: 50px;
   height: 50px;
   border-radius: 5px;
@@ -43,7 +48,9 @@ button {
   background-color: lightblue;
   border:1px solid yellow;
 }
-
+.mod{
+  font-size:10px;
+}
 form div {
   margin: 50px;
 }

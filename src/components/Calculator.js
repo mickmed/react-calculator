@@ -4,7 +4,6 @@ class Calculator extends Component {
   constructor(props) {
     super(props);
     this.state = { 
-        value: '',
         eq: '',
         ans: 0
     };
@@ -15,44 +14,40 @@ class Calculator extends Component {
     event.preventDefault();
   }
 
-  handleSubmit = (event) => {
+  clkMathEq = event => {
+    let eqStr = event.target.innerText
+    this.setState(prevState => {
+        return{
+            eq: prevState.eq + eqStr
+        }
+    })
     event.preventDefault();
   }
 
-  clkMathEq = event => {
-    let sh = event.target.innerText
-    this.setState(prevState => {
-        return{
-            sum: prevState.eq + sh
-        }
-    })
-  
-    event.preventDefault();
+  convertModToPercent(val){
+    let rawEq = val
+    rawEq.includes('%') ? rawEq = rawEq.replace('%', '*1/100*') : val
+    let ansEval = eval(rawEq)
+    return ansEval
   }
 
   clkEquals = event => {
-      let a = eval(this.state.eq)
-      console.log(a)
-
-      this.setState({ans:a})
-              
-          
-      event.preventDefault()
-  }
-
-  handleKeyUp = event => {
-    let a = eval(this.state.eq)
-    console.log(event.keyCode)
-
-    this.setState(prevState => {
-        return{
-            ans:a
-        }
-    })
+    let ansEval = this.convertModToPercent(this.state.eq)
+    this.setState({ans:ansEval})
     event.preventDefault()
   }
 
+  clkClear = event => {
+    this.setState({ans:0,eq:''})
+  }
 
+  handleKeyDown = event => {
+    let ansEval = this.convertModToPercent(this.state.eq)
+    
+    this.setState({ans:ansEval})
+    if(this.state.eq === ''){this.setState({ans: ''})} 
+    event.preventDefault()  
+  }
 
   render() {
       
@@ -60,13 +55,13 @@ class Calculator extends Component {
       <div className="container">
       <div className="inner-cont">
         <h1><i>React Math Master</i></h1>
-        <form onSubmit={this.handleSubmit}>
+        <form>
             <div className="inputs">
                 <input
                 type="text"
                 value={this.state.eq}
                 onChange={this.handleChange}
-                onKeyUp={this.handleKeyUp}
+                onKeyUp={this.handleKeyDown}
                 autoFocus
                 
                 />
@@ -90,14 +85,17 @@ class Calculator extends Component {
                 <button type="button"  onClick={this.clkMathEq}>8</button>
                 <button type="button"  onClick={this.clkMathEq}>9</button>
                 <button type="button"  onClick={this.clkMathEq}>0</button>
-                
+                <button type="button"  onClick={this.clkMathEq}>.</button>
             </div>
             <div>
                 <button type="button"  onClick={this.clkMathEq}>+</button>
                 <button type="button"  onClick={this.clkMathEq}>-</button>
                 <button type="button"  onClick={this.clkMathEq}>*</button>
                 <button type="button"  onClick={this.clkMathEq}>/</button>
+                <button type="button"  onClick={this.clkMathEq}>%</button>
                 <button type="button"  onClick={this.clkEquals}>=</button>
+                
+                <button type="button"  onClick={this.clkClear}>C</button>
             </div>
 
           {/* <input type="submit" value="Submit" /> */}
