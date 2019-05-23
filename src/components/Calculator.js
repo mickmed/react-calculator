@@ -5,7 +5,7 @@ class Calculator extends Component {
     super(props);
     this.state = { 
         eq: '',
-        ans: 0
+        ans: 1
     };
   }
 
