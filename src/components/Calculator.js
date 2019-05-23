@@ -17,6 +17,7 @@ class Calculator extends Component {
   clkMathEq = event => {
     let eqStr = event.target.innerText
     this.setState(prevState => {
+      
         return{
             eq: prevState.eq + eqStr
         }
